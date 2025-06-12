@@ -666,8 +666,9 @@ In recent years there was a spike in number of publications exploring concepts o
 
 - In this lecture, CGC as a _model_ of hadronic wave function
 
-  - ✓ Computable!
-  - ✗ Genuine non-perturbative effects are missing
+  - **✓ Computable!**
+  - <span class="attcomp">✗ Genuine non-perturbative effects are missing </span>
+
 
 - Entanglement in the hadronic wave function
 
@@ -678,8 +679,8 @@ In recent years there was a spike in number of publications exploring concepts o
   - More frequently entanglement is discussed in coordinate space
 
 - Goal: explore if concepts and methods of quantum information theory could give new insights to/simpler computational approach to high energy collisions
-  - ✗ We are not there yet!
-  - ✓ There are some amusing results!
+  -  <span class="attcomp">✗ We are not there yet!</span>
+  - **✓ There are some amusing results!**
 
 ---
 
@@ -695,13 +696,18 @@ In recent years there was a spike in number of publications exploring concepts o
   - $|v\rangle$ = state vector characterizing the valence d.o.f.
   - $|s\rangle$ = soft fields
 
+<div class="cite">
+  Lectures by Schenke and Kovchegov 
+  </div>
+
+
 ---
 
 ### Valence degrees of freedom
 
 - For a large nucleus or proton at high energy, $|v\rangle$ can be approximated by McLerran-Venugopalan model:
 
-$$\langle \rho |v\rangle\langle v|\rho\rangle = \mathcal{N}  e^{-\int_{\vec{k}} \frac{1}{2\mu^2} \rho_a(\vec{k}) \rho^*_a(\vec{k})}$$
+$$ W[\rho]   = \langle \rho |v\rangle\langle v|\rho\rangle = \mathcal{N}  e^{-\int_{\vec{k}} \frac{1}{2\mu^2} \rho_a(\vec{k}) \rho^*_a(\vec{k})}$$
 
 where $\rho$ is the color charge density of the valence d.o.f.
 
@@ -722,7 +728,7 @@ where $\rho$ is the color charge density of the valence d.o.f.
 
 - $b^i$ is Weizsäcker-Williams field – solution of static Yang-Mills equation:
   <div class="medmath">
-  $$\partial_i b^i = g\rho; \quad b_i = \frac{1}{ig} V\partial_i V^+$$
+  $$D_i b^i = g\rho; \quad b_i = \frac{1}{ig} V\partial_i V^+$$
   </div>
 
 - At leading order in color charge density:
@@ -730,7 +736,7 @@ where $\rho$ is the color charge density of the valence d.o.f.
   $$b^i_a(\vec{k}) = g\rho_a(\vec{k})\frac{i\vec{k}_i}{k^2} + \mathcal{O}(\rho^2)$$
   </div>
 
-- Can be systematically improved: $|s\rangle = \mathcal{C}\mathcal{B}|0\rangle$, $\mathcal{B} \propto \exp(\phi B^{-1}\phi)$; reproduces JIMWLK
+- Can be systematically improved
 
 <div class="cite">
 A. Kovner, M. Lublinsky, et al, 2007-2009
@@ -750,7 +756,7 @@ A. Kovner, M. Lublinsky, et al, 2007-2009
   - Phenomenological motivation: measurements at mid-rapidity reflect properties of soft gluons
 
 - Reduced density matrix for small-x d.o.f.:
-  $$\hat{\rho}_r = \mathrm{Tr}_\rho \hat{\rho} \equiv \int D\rho  \langle\rho|\hat{\rho}|\rho\rangle = \int D\rho  \langle\rho|v\rangle  |s\rangle\langle s|  \langle v|\rho\rangle$$
+  $$\hat{\rho}_r = \mathrm{Tr}_\rho \hat{\rho} \equiv \int D\rho  \langle\rho|\hat{\rho}|\rho\rangle = \int D\rho  \orange{\langle\rho|v\rangle}  |s\rangle\langle s|  \orange{\langle v|\rho\rangle} = \int d\rho \orange{W[\rho]}   |s\rangle\langle s|   $$
 
 - Alternatively: density matrix of the complement
   - Integrate out soft degrees of freedom
@@ -771,20 +777,6 @@ Expected properties:
 
 - Due to integration of d.o.f.: mixed state
 
----
-
-### Technical details
-
-For simplicity, consider the dilute approximation for WW field first
-
-- Calculations are easier in coherent field basis
-
-  - To mimic parton model we used number basis representation
-
-- Reduced density matrix:
-  $$\rho_r = \mathrm{Tr}_v |s\rangle\langle s| \otimes |v\rangle\langle v| = \int d\rho  W[\rho]  |s\rangle\langle s|$$
-
-- Matrix element computation involves straightforward combinatorics
 
 ---
 
@@ -853,7 +845,6 @@ P. Tribedy and R. Venugopalan, 1112.2445
 Yu. Kovchegov, V.S., 1802.08166
 </div>
 
-Do similar higher-order density corrections matter for final state gluon fluctuations?
 
 ---
 
@@ -954,30 +945,6 @@ $$\beta\omega \approx -\ln M(k); \quad f \approx M = \frac{g^2\mu^2}{q^2} \sim \
 **In the dilute limit $k \gg Q_s$:** $M(k) = \frac{1}{N_c\alpha_s}\frac{Q_s^2}{k^2}$ and $M(k) \gg 1$ for $Q_s < k < Q_s/\sqrt{N_c\alpha_s}$.
 
 In this regime, $\beta\omega \approx \frac{k}{T_{\mathrm{eff}}}$ with $T_{\mathrm{eff}} = \frac{Q_s}{\sqrt{N_c\alpha_s}}$.
-
----
-
-### Quasi-particle dispersion relation II
-
-- Quasiparticles have Boltzmann-like density matrix
-
-- In semihard momentum range, $Q_s < k < Q_s/\sqrt{N_c\alpha_s}$:
-  - Their spectrum corresponds to massless particles
-  - In a heat-bath of temperature $T_{\mathrm{eff}} = \frac{Q_s}{\sqrt{N_c\alpha_s}}$
-
-<div class="cite">
-see also, CGC-Black Hole correspondence by Gia Dvali and Raju Venugopalan, 2106.11989
-</div>
-
-- Explicit unitary transformation to quasiparticle basis:
-  $$c_\pm(k) = \cosh(B_\pm)  a_\pm(k) + \sinh(B_\pm)  a_\pm^\dagger(-k)$$
-
-  with $B_\pm = \frac{1}{4}\ln(1 + 4\tilde{M}_\pm)$
-
-  - For large $\tilde{M}_\pm$ or $q < Q_s/(N_c\alpha_s)^{1/2}$: $c_\pm(k) \approx a_\pm(k) + a_\pm^\dagger(-k)$
-  - For small $\tilde{M}_\pm$ or $q > Q_s/(N_c\alpha_s)^{1/2}$: $c_\pm(k) \approx a_\pm(k)$
-
-- Amusing, but any phenomenological implications?
 
 ---
 
@@ -1148,7 +1115,7 @@ A number of papers build their narrative along the following path:
 
 ### Proton-proton collisions
 
-<img src="img/1904.11974v2 .png" width="50%" style="background-color: white;">
+<img src="img/1904.11974v2 .png" width="90%" style="background-color: white;">
 
 <div class="cite">
 Z. Tu, D. Kharzeev, T. Ullrich, 1904.11974
@@ -1158,7 +1125,7 @@ Z. Tu, D. Kharzeev, T. Ullrich, 1904.11974
 
 ### QCD evolution of entanglement entropy
 
-<img src="img/Evolution.png" width="50%" style="background-color: white;">
+<img src="img/Evolution.png" width="70%" style="background-color: white;">
 
 <div class="cite">
 M. Hentschinski, D. Kharzeev, et. al., 2408.01259
@@ -1168,7 +1135,7 @@ M. Hentschinski, D. Kharzeev, et. al., 2408.01259
 
 ### Additional sources of entanglement
 
-<img src="img/FullPic.png" width="50%" style="background-color: white;">
+<img src="img/FullPic.png" width="80%" style="background-color: white;">
 
 - Relative entropy for Fragmentation Functions
 
@@ -1187,7 +1154,7 @@ G. B. Calviño, J. G. Olivares, and F. J. Llanes-Estrada, 2211.09228
 
 </div>
 
-<img src="img/2410.22331.png" width="50%" style="background-color: white;">
+<img src="img/2410.22331.png" width="70%" style="background-color: white;">
 
 <div class="cite">
 Jaydeep Datta, Abhay Deshpande, et. al., 2410.22331, </br>
