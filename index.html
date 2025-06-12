@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/night.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
+  
+  ///https://www.colorhexa.com/ff6b35
+  <style>
+  .container {
+  display: flex;
+  align-items: center;
+  }
+  .col {
+  flex: 1;
+  align-items: center;
+  }
+  div.vspace1em {
+  clear: both;
+  height: 1em;
+  }
+
+  .reveal {
+  font-size: 26px; /* Global font size setting */
+  }
+  .reveal p {
+  text-align: left;
+  }
+  .reveal ul {
+  display: block;
+  }
+  .reveal ol {
+  display: block;
+  }
+
+  .cite {
+  margin: 0px auto;
+  color: #aaaaaa;
+  text-align: right;
+  font-size: 40%;
+  }
+
+
+  .att{
+  color:  #F58137;
+  font-weight: 600;
+  }
+
+  .attcomp{
+  color:  #00B0F0;
+  font-weight: 600;
+  }
+
+  .note {
+  margin: 0px auto;
+  color: #999999;
+  font-style: italic;
+  font-weight: 100;
+  text-align: left;
+  font-size: 50%;
+  }
+  .smallmath {
+  font-size: 60%;
+  }
+
+  .medmath {
+  font-size: 80%;
+  }
+
+  .colorized-list li:nth-child(odd) {
+  background-color: #222222;
+  color: #ffffff;
+  color: #eeeeee;
+  padding: 1px 15px;
+  margin: 3px 0;
+  border-radius: 5px;
+}
+
+.colorized-list li:nth-child(even) {
+  background-color: #1a1a1a;
+  color: #eeeeee;
+  padding: 1px 15px;
+  margin: 3px 0;
+  border-radius: 5px;
+}
+
+.reveal .colorized-list li {
+  text-align: left;
+}
+
+  /* Container for the boxes */
+.box-container {
+  display: flex;
+  justify-content: right;
+  gap: 0px; /* Space between boxes */
+  width: 100%;
+}
+
+/* Top alignment */
+.top-aligned {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-top: 120px; /* Optional: adds some space from the very top */
+}
+
+/* Basic box styling */
+.box {
+  padding: 20px;
+  border-radius: 5px;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+/* Box colors */
+.blue-box {
+  background-color: #F58137;
+}
+
+.red-box {
+  background-color: #00B0F0;
+}
+
+.zigzag-divider {
+  height: 5px;
+  width: 90%;
+  margin: 20px auto;
+  background: linear-gradient(45deg, transparent 33.333%, #333 33.333%, #333 66.667%, transparent 66.667%),
+              linear-gradient(-45deg, transparent 33.333%, #333 33.333%, #333 66.667%, transparent 66.667%);
+  background-size: 20px 30px;
+  background-position: 0 0;
+}
+
+  .dotted-separator {
+  height: 3px;
+  width: 90%;
+  margin: 10px auto;
+  background-image: linear-gradient(to right, #777 20%, transparent 20%);
+  background-position: top;
+  background-size: 15px 3px;
+  background-repeat: repeat-x;
+}
+
+.columns {
+  display: flex;
+  gap: 1em;
+}
+.column {
+  flex: 1;
+}
+
+  </style>
+
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section
+          data-markdown="slides.md"
+          data-separator="^---$"
+          data-separator-vertical="^--$"
+        ></section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/math/math.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+      hash: true,
+      width: 1120,
+      height: 700,
+      history: false,
+      progress: true,
+      slideNumber: 'c/t',
+      
+      mathjax3: {
+        tex: {
+          macros: {
+            orange: ["{\\color{Orange}{#1}}", 1],
+            blue: ["{\\color{ProcessBlue}{#1}}", 1],
+          },
+        },
+      },
+
+      // Learn about plugins: https://revealjs.com/plugins/
+      plugins: [
+        RevealMarkdown,
+        RevealMath.MathJax3,
+      ],
+    });
+    </script>
+  </body>
+</html>
